@@ -1,4 +1,4 @@
-#bubblegame is fun project.
+#bubblegame is fun #game project.
 Used Technologies: #html, #css, #Javascript
 Game Rule: 
 when you will run this app
