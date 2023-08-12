@@ -21,14 +21,18 @@ function timerFun() {
         }else{
            clearInterval(tmr);
            pbotm.innerHTML = `
-           <div style="color: wheat;"><h3>Game Over!</h3><h1>Final Score : ${score.textContent}</h1>
-           <div style="display: flex; gap: 20px; align-items: center; margin: 0;">
-            <label style="margin: 0;">Lets Smash the HighScore : </label><button class="btn btn-dark" style="color: gold;border: 1px solid;" id="replay">Go</button>
-           </div>
-           </div>`;
-           setCookie("bubbleHighScore", newScore, 10);
-           document.querySelector("#highscore").textContent = getCookie("bubbleHighScore");
-           document.querySelector("#replay").addEventListener("click", function(){
+            <div style="color: wheat;"><h3>Game Over!</h3><h1>Final Score : ${score.textContent}</h1>
+            <div style="display: flex; gap: 20px; align-items: center; margin: 0;">
+                <label style="margin: 0;">Lets Smash the HighScore : </label><button class="btn btn-dark" style="color: gold;border: 1px solid;" id="replay">Go</button>
+            </div>
+            </div>`;
+
+            if(Number(getCookie("bubbleHighScore")) < newScore || getCookie("bubbleHighScore") == '') {
+                setCookie("bubbleHighScore", newScore, 10);
+            }
+
+            document.querySelector("#highscore").textContent = getCookie("bubbleHighScore");
+            document.querySelector("#replay").addEventListener("click", function() {
                 startTheGame();
             });
         }
