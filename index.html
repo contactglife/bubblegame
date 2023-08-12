@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Bubble Game</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/favicon_io/site.webmanifest">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container p-md-4" id="mainContainer">
+        <div class="row" id="pannel">
+            
+            <div class="col-md-12" id="ptop">
+                <div class="box">
+                    <label>Hit</label>
+                    <div id="hitTarget">1</div>
+                </div>
+                <div class="box">
+                    <label>Timer</label>
+                    <div id="timeCounter">60</div>
+                </div>
+                <div class="box">
+                    <label>Score</label>
+                    <div id="score">0</div>
+                </div>
+                <div class="box">
+                    <label>HighScore</label>
+                    <div id="highscore">0</div>
+                </div>
+            </div>
+            <div class="col-md-12" id="pbotm">
+                <div id="startScreen">
+                    <button id="startButton" class="btn btn-lg btn-dark">Start New</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>
